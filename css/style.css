@@ -1,36 +1,42 @@
 /* Small Screens - less than 600px */
 body{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
-.container{
+.my-container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 3fr 2fr 9fr 4fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 2fr 9fr 4fr 80px;
     grid-template-areas:
-    "hd hd hd hd"
-    "sd sd sd sd"
-    "main main main main"
-    "five five five five"
-    "ft ft ft ft";
+    "hd"
+    "sd"
+    "main"
+    "fav"
+    "ft";
     border: 2px solid rgb(158, 143, 2);
-    color: #fffff8;
+    /* color: #fffff8; */
+    text-align: center;
 }
 
 .header{
     grid-area: hd;
+    
 }
 
 .sidebar{
     grid-area: sd;
+    font: Roboto sans-serif;
 }
 
 .content{
     grid-area: main;
 }
 
-.topFive{
-    grid-area: five;
+.favs{
+    grid-area: fav;
+    justify-self: center;
+    width:100%;
+    height:100%;
 }
 
 .footer{
@@ -41,35 +47,94 @@ body{
     border: 2px solid rgb(158, 143, 2);
 }
 
+.menu-item{
+    font: 12px Roboto sans-serif;
+    color:rgb(86, 221, 23);
+    text-align:center;
+}
+h1.title{
+    text-align:center;
+}
+
+.fav-team-image{
+    background-image: url(../images/saints-logo-2.jpeg);
+}
+.fav-game-image{
+    background-image: url(../images/apex-logo-3.jpeg);
+    /* background-size: auto; */
+}
+
+.fav-movie-image{
+    background-image: url(../images/interstellar-logo-4.jpeg);
+    /* background-size: auto; */
+}
+
+h3.favorites{
+    text-align: center;
+    /* color:#fffff8; */
+}
+
+span.mdc-image-list__label{
+    text-align:center;
+    /* color: #fffff8; */
+}
+
+
+
+li.mdc-image-list__item{
+    display:inline-block;
+}
+
+h3.mdc-list-group__subheader{
+    color:rgb(158, 143, 2);
+}
+a.mdc-list-item__text{
+    color:rgb(86, 221, 23);
+    font: 12px Roboto sans-serif;
+    text-align:center;
+}
+
+li.mdc-list-item:hover{
+    background-color: silver;
+}
+
+a.text-12{
+    text-decoration: none;
+    font: 12px Roboto sans-serif;
+    text-align:center;
+}
+
 
 /* Medium Screens - between 600px and 900px */
 @media(min-width: 600px) and (max-width: 900px){
-    .container {
+    .my-container {
         display: grid;
-        grid-template-columns: 1fr 3fr 3fr 3fr;
-        grid-template-rows: 3fr 11fr 4fr 2fr;
+        grid-template-columns: 90px 3fr 3fr 3fr;
+        grid-template-rows: 80px 11fr 4fr 80px;
         grid-template-areas:
         "hd hd hd hd"
         "sd main main main"
-        "five five five five"
+        "fav fav fav fav"
         "ft ft ft ft";
         border: 2px solid rgb(158, 143, 2);
-        color: #fffff8;
+        /* color: #fffff8; */
+        text-align: center;
     }
 }
 
 
 /* Large Screens - Greater than 900px */
 @media(min-width: 901px){
-    .container {
+    .my-container {
         display: grid;
-        grid-template-columns: 1fr 3fr 3fr 3fr 1.5fr;
-        grid-template-rows: 3fr 15fr 2fr;
+        grid-template-columns:  90px 3fr 3fr 3fr 1.5fr;
+        grid-template-rows: 80px 15fr 80px;
         grid-template-areas:
         "hd hd hd hd hd"
-        "sd main main main five"
+        "sd main main main fav"
         "ft ft ft ft ft";
         border: 2px solid rgb(158, 143, 2);
-        color: #fffff8;
+        /* color: #fffff8; */
+        text-align: center;
     }
 }
