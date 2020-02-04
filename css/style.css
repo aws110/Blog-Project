@@ -6,45 +6,43 @@ body{
 .my-container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 80px 2fr 9fr 4fr 80px;
+    grid-template-rows: 20em 2fr 9fr 4fr 20em;
     grid-template-areas:
     "hd"
     "sd"
     "main"
     "fav"
     "ft";
-    border: 2px solid rgb(158, 143, 2);
+    border: 1px solid rgb(0, 0, 0);
     /* color: #fffff8; */
     text-align: center;
 }
 
+/* Header  CSS */
 .header{
-    grid-area: hd;
-    
+    grid-area: hd;  
 }
 
+h1.title{
+    text-align:center;
+}
+
+/* Sidebar Menu CSS */
 .sidebar{
     grid-area: sd;
     font: Roboto sans-serif;
 }
 
-.content{
-    grid-area: main;
+.sidebar-container{
+    /* Need to make the sidebar horizontal instead of vertical */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.favs{
-    grid-area: fav;
-    justify-self: center;
-    width:100%;
-    height:100%;
-}
-
-.footer{
-    grid-area: ft;
-}
-
-.box{
-    border: 2px solid rgb(158, 143, 2);
+h2.sidebar{
+    margin-block-start: 0.5rem;
+    margin-block-end:0.3rem;
 }
 
 .menu-item{
@@ -52,46 +50,21 @@ body{
     color:rgb(86, 221, 23);
     text-align:center;
 }
-h1.title{
-    text-align:center;
+div.mdc-list-group{
+    margin: 0 1.5rem;
 }
-
-.fav-team-image{
-    background-image: url(../images/saints-logo-2.jpeg);
-}
-.fav-game-image{
-    background-image: url(../images/apex-logo-3.jpeg);
-    /* background-size: auto; */
-}
-
-.fav-movie-image{
-    background-image: url(../images/interstellar-logo-4.jpeg);
-    /* background-size: auto; */
-}
-
-h3.favorites{
-    text-align: center;
-    /* color:#fffff8; */
-}
-
-span.mdc-image-list__label{
-    text-align:center;
-    /* color: #fffff8; */
-}
-
-
-
-li.mdc-image-list__item{
-    display:inline-block;
-}
-
-h3.mdc-list-group__subheader{
+h4.mdc-list-group__subheader{
     color:rgb(158, 143, 2);
+    margin:0.1rem;
+
 }
-a.mdc-list-item__text{
-    color:rgb(86, 221, 23);
-    font: 12px Roboto sans-serif;
-    text-align:center;
+
+li.mdc-list-item{
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px;
+    width: auto;
+    height: 20px;
 }
 
 li.mdc-list-item:hover{
@@ -103,6 +76,156 @@ a.text-12{
     font: 12px Roboto sans-serif;
     text-align:center;
 }
+
+/* Main content CSS */
+.content{
+    grid-area: main;
+}
+
+.blog-area{
+    display: grid;
+    grid-template-columns: 90%;
+    grid-row: 90%;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    background-color:#fff;
+    justify-content: space-around;
+}
+
+.blog-box{
+    border: 2px solid rgb(0, 0, 0); 
+    /* padding: 20px; */
+    border-radius:10px;
+    color: rgb(0, 0, 0);
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+
+.blog-box-image{
+    display: flex;
+    height: 70%;
+    background-size: contain;
+    min-height: 100px;
+    max-height: 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.blog-upper-left-image{
+    background-image: url("../images/NHL-All-Stars.jpg");
+    
+}
+
+.blog-upper-right-image{
+    background-image: url("../images/Apex-blog-season-4.jpg");
+
+}
+
+.blog-lower-left-image{
+    background-image: url("../images/Oscars.jpg");
+
+}
+
+.blog-lower-right-image{
+    background-image: url("../images/Saints-Brees-Hill.jpg");
+
+}
+
+a.blog-title{
+    font: 25px Roboto sans-serif bold italic;
+    color: rgb(0, 0, 0)
+    
+}
+
+.blog-title:hover{
+    cursor: pointer;
+}
+.blog-description{
+    display: block;
+    height: 20%;
+    max-width:100%;
+    font: 12px Roboto sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+
+
+a.blog-link{
+    display:flex;
+    height: 10%;
+    font: 12px Roboto sans-serif;
+    color: blue;
+}
+/* Favorites area CSS */
+.favs{
+    grid-area: fav;
+    justify-self: center;
+    width:100%;
+    height:100%;
+}
+
+h3.favorites{
+    text-align: center;
+    margin-block-start: 0.5rem;
+    margin-block-end:0.3rem;
+}
+
+.favs-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.image-container{
+    display: flex;
+    width: 100%;
+    min-height:100px;
+    max-height:400px;
+    height: 20vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-container-label{
+    font: 14px Roboto  sans-serif;
+    text-align: center;
+}
+
+.fav-images{
+    background-size: contain;
+    min-height: 100px;
+    max-height: 300px;
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+.fav-team-image{
+    background-image: url(../images/saints-logo-2.jpeg);
+}
+.fav-game-image{
+    background-image: url(../images/apex-logo-3.jpeg);
+}
+
+.fav-movie-image{
+    background-image: url(../images/interstellar-logo-4.jpeg);
+}
+
+
+/* Footer  CSS */
+.footer{
+    grid-area: ft;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+/* Apply to all CSS */
+.box{
+    border: 2px solid rgb(158, 143, 2);
+}
+
 
 
 /* Medium Screens - between 600px and 900px */
@@ -120,6 +243,25 @@ a.text-12{
         /* color: #fffff8; */
         text-align: center;
     }
+
+    .sidebar-container{
+        /* Go vertical, set the display to grid and this will work as intended */
+        display: grid;
+    }
+
+    .blog-area{
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-row: 45% 45%;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        background-color:#fff;
+        justify-content: space-around;
+    }
+
+    /* div.mdc-list-group{
+        margin: 0;
+    } */
 }
 
 
@@ -136,5 +278,25 @@ a.text-12{
         border: 2px solid rgb(158, 143, 2);
         /* color: #fffff8; */
         text-align: center;
+    }
+    .sidebar-container{
+        /* Go vertical, set the display to grid and this will work as intended */
+        display: grid;
+    }
+
+    .favs-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .blog-area{
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-row: 45% 45%;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        background-color:#fff;
+        justify-content: space-around;
     }
 }
