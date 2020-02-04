@@ -6,16 +6,18 @@ body{
 .my-container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20em 2fr 9fr 4fr 20em;
+    grid-template-rows: 80px 150px 1fr 200px 80px;
     grid-template-areas:
     "hd"
     "sd"
     "main"
     "fav"
     "ft";
-    border: 1px solid rgb(0, 0, 0);
+    /* border: 1px solid rgb(0, 0, 0); */
     /* color: #fffff8; */
     text-align: center;
+    align-content: center;
+    justify-content: space-around;
 }
 
 /* Header  CSS */
@@ -93,10 +95,10 @@ a.text-12{
 }
 
 .blog-box{
-    border: 2px solid rgb(0, 0, 0); 
+    /* border: 2px solid rgb(0, 0, 0);  */
     /* padding: 20px; */
     border-radius:10px;
-    color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
     display:flex;
     flex-direction: column;
     align-items:center;
@@ -135,7 +137,8 @@ a.text-12{
 
 a.blog-title{
     font: 25px Roboto sans-serif bold italic;
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
+    max-width: 90%;
     
 }
 
@@ -145,7 +148,7 @@ a.blog-title{
 .blog-description{
     display: block;
     height: 20%;
-    max-width:100%;
+    max-width:90%;
     font: 12px Roboto sans-serif;
     overflow: hidden;
     white-space: nowrap;
