@@ -1,0 +1,91 @@
+/* Main content CSS */
+.content{
+    grid-area: main;
+}
+
+.blog-area{
+    display: grid;
+    grid-template-columns: 90%;
+    grid-row: 90%;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: space-around;
+    
+}
+
+.blog-box{
+    border-radius:10px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    margin-block-end: 10px;
+    background-color: silver;
+}
+
+.blog-box-image{
+    display: flex;
+    height: 70%;
+    background-size: contain;
+    min-height: 80px;
+    max-height: 100px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.blog-1-image{
+    background-image: url("../../images/Saints-Brees-Hill.jpg");
+}
+.blog-2-image{
+    background-image: url("../../images/NHL-All-Stars.jpg");
+    
+}
+
+.blog-3-image{
+    background-image: url("../../images/Apex-blog-season-4.jpg");
+
+}
+
+.blog-4-image{
+    background-image: url("../../images/Oscars.jpg");
+
+}
+
+a.blog-title{
+    font: 20px Roboto sans-serif bold italic;
+    color: rgb(0, 0, 0);
+    max-width: 90%;
+    
+}
+
+.blog-title:hover{
+    cursor: pointer;
+}
+.blog-description{
+    display: block;
+    height: 20%;
+    max-width:90%;
+    font: 12px Roboto sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+
+
+a.blog-link{
+    display:flex;
+    height: 10%;
+    font: 12px Roboto sans-serif;
+    color: blue;
+}
+
+figure{
+    margin-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+figcaption{
+    font: 10px Roboto sans-serif;
+}

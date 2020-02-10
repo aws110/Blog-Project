@@ -1,0 +1,29 @@
+/* Medium Screens - between 600px and 900px */
+@media(min-width: 600px) and (max-width: 900px){
+    .my-container {
+        display: grid;
+        grid-template-columns: 90px 3fr 3fr 3fr;
+        grid-template-rows: 80px 1fr 200px 80px;
+        grid-template-areas:
+        "hd hd hd hd"
+        "sd main main main"
+        "fav fav fav fav"
+        "ft ft ft ft";
+        border: 2px solid rgb(158, 143, 2);
+        /* color: #fffff8; */
+        text-align: center;
+    }
+
+    .sidebar-container{
+        /* Go vertical, set the display to grid and this will work as intended */
+        display: grid;
+    }
+
+    .blog-area{
+        display: grid;
+        grid-template-columns: minmax(25% 45%);
+        grid-column-gap: 20px;
+        background-color:#fff;
+        justify-content: space-around;
+    }
+}
