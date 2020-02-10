@@ -1,0 +1,96 @@
+@import "./style-blog.css";
+@import "./style-favorites.css";
+@import "./style-footer.css";
+@import "./style-header.css";
+@import "./style-sidebar.css";
+
+/* Small Screens - less than 600px */
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+/* Apply to all CSS */
+.my-container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "hd"
+    "sd"
+    "main"
+    "fav"
+    "ft";
+    text-align: center;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.box{
+    border: 2px solid rgb(158, 143, 2);
+}
+
+
+/* Medium Screens - between 600px and 900px */
+@media(min-width: 600px) and (max-width: 900px){
+    .my-container {
+        display: grid;
+        grid-template-columns: 90px 3fr 3fr 3fr;
+        grid-template-rows: 80px 1fr 200px 80px;
+        grid-template-areas:
+        "hd hd hd hd"
+        "sd main main main"
+        "fav fav fav fav"
+        "ft ft ft ft";
+        border: 2px solid rgb(158, 143, 2);
+        /* color: #fffff8; */
+        text-align: center;
+    }
+
+    .sidebar-container{
+        /* Go vertical, set the display to grid and this will work as intended */
+        display: grid;
+    }
+
+    .blog-area{
+        display: grid;
+        grid-template-columns: minmax(25% 45%);
+        grid-column-gap: 20px;
+        background-color:#fff;
+        justify-content: space-around;
+    }
+}
+
+
+/* Large Screens - Greater than 900px */
+@media(min-width: 901px){
+    .my-container {
+        display: grid;
+        grid-template-columns:  90px 3fr 3fr 3fr 150px;
+        grid-template-rows: 80px 1fr 80px;
+        grid-template-areas:
+        "hd hd hd hd hd"
+        "sd main main main fav"
+        "ft ft ft ft ft";
+        border: 2px solid rgb(158, 143, 2);
+        /* color: #fffff8; */
+        text-align: center;
+    }
+    .sidebar-container{
+        /* Go vertical, set the display to grid and this will work as intended */
+        display: grid;
+    }
+
+    .favs-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .blog-area{
+        display: grid;
+        grid-template-columns: minmax(25% 45%);
+        grid-column-gap: 20px;
+        background-color:#fff;
+        justify-content: space-around;
+    }
+}

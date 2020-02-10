@@ -1,0 +1,10 @@
+/* Header  CSS */
+.header{
+    grid-area: hd;  
+    background-color: navy;
+}
+
+h1.title{
+    text-align:center;
+    color: rgb(236, 156, 5);
+}

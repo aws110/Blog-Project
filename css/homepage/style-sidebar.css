@@ -1,0 +1,46 @@
+/* Sidebar Menu CSS */
+.sidebar{
+    grid-area: sd;
+    font: Roboto sans-serif;
+    background-color:  rgb(170, 170, 170);
+}
+
+.sidebar-container{
+    /* Need to make the sidebar horizontal instead of vertical */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+h2.sidebar{
+    margin-block-start: 0.5rem;
+    margin-block-end:0.3rem;
+}
+
+div.mdc-list-group{
+    margin: 0 1.5rem;
+}
+h4.mdc-list-group__subheader{
+    color:rgb(158, 143, 2);
+    margin:0.1rem;
+
+}
+
+li.mdc-list-item{
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px;
+    width: auto;
+    height: 20px;
+}
+
+li.mdc-list-item:hover{
+    background-color: silver;
+}
+
+a.text-12{
+    text-decoration: none;
+    font: 12px Roboto sans-serif;
+    text-align:center;
+    color: blue;
+}
