@@ -1,7 +1,7 @@
 # Blog-Project
 # Author: Adam Simonar
 
-To access the blog download all files and open the file 'index.html' in a browser.
+To access the blog download all files and open the file '/html/index.html' in a browser.
 
 
 A personal blog website using basic html and css skills for Udacity project
